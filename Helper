@@ -1,0 +1,43 @@
+for (Map.Entry<String, String> pair : map.entrySet())
+    {
+        String key = pair.getKey();                      //ключ
+        String value = pair.getValue();                  //значение
+        System.out.println(key + ":" + value);
+    }
+
+
+   BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+   FileInputStream inputStream = new FileInputStream("c:/data.txt");
+               FileOutputStream outputStream = new FileOutputStream("c:/result.txt");
+               byte[] buffer = new byte[1000];
+               while (inputStream.available() > 0)
+               {
+                   int count = inputStream.read(buffer);
+                   outputStream.write(buffer, 0, count);
+               }
+               inputStream.close();
+               outputStream.close();
+
+
+                FileInputStream inputStream = new FileInputStream("c:/data.txt");
+                FileOutputStream outputStream = new FileOutputStream("c:/result.txt");
+                while (inputStream.available() > 0)
+                {
+                 int data = inputStream.read();
+                 outputStream.write(data);
+                }
+                inputStream.close();
+                outputStream.close();
+
+new BufferedReader(new FileReader("c:/data.txt"));
+
+FileReader reader = new FileReader("c:/data.txt");
+ FileWriter writer = new FileWriter("c:/result.txt");
+ while (reader.ready())
+ {
+  int data = reader.read();
+  writer.write(data);
+ }
+ reader.close();
+ writer.close();

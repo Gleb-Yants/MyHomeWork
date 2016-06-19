@@ -1,0 +1,34 @@
+package task_1;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class CrazyLogger {
+    public static final StringBuilder sb = new StringBuilder();
+    private static final String dateFormat = "dd-MM- YYYY : hh-mm";
+
+    public static void addToLog(MyException me) {
+        LocalDateTime ldt = LocalDateTime.now();
+        sb.append("At " + ldt.format(DateTimeFormatter.ofPattern(dateFormat)) + " catched: " + me.toString() + "\n");
+    }
+
+    public static String getLog() {
+        return sb.toString();
+    }
+
+    public static void findExOfDay(LocalDateTime ldt) {
+        //LocalDateTime ldt = LocalDateTime.now();
+        String day = ldt.format(DateTimeFormatter.ofPattern("dd-MM- YYYY"));
+        String[] tmp = sb.toString().split("\n");
+        for (String tmp2 : tmp) {
+            if (tmp2.startsWith(day, 3)) {
+                System.out.println(tmp2);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(LocalDate.now());
+    }
+}
