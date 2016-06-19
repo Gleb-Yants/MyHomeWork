@@ -6,34 +6,35 @@ package module_1.task_6;
 public class Notebook {
     Note[] notes = new Note[3];
 
-    public void addNote(String text){
-        for(int i=0;i<notes.length;i++){
-            if(notes[i]==null){
+    public void addNote(String text) {
+        for (int i = 0; i < notes.length; i++) {
+            if (notes[i] == null) {
                 notes[i] = new Note(text);
                 break;
             }
-            if(i==notes.length-1){
+            if (i == notes.length - 1) {
                 System.out.println("Notebook is full");
             }
         }
     }
 
-    public void deleteNote(int index){
-        if(index>=0 && index<notes.length){
-            notes[index]=null;
+    public void deleteNote(int index) {
+        if (index >= 0 && index < notes.length) {
+            notes[index] = null;
         }
     }
 
-    public void editNote(int index, String text){
-        if(index>=0 && index<notes.length){
-            notes[index]=new Note(text);
+    public void editNote(int index, String text) {
+        if (index >= 0 && index < notes.length) {
+            notes[index] = new Note(text);
         }
     }
 
-    public void showAllNotes(){
-        for(Note note : notes){
-            if(note!=null){
-                System.out.println("# "+note.text);}
+    public void showAllNotes() {
+        for (Note note : notes) {
+            if (note != null) {
+                System.out.println("# " + note.text);
+            }
         }
     }
 /* just for test

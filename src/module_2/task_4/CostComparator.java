@@ -14,7 +14,7 @@ import java.util.Comparator;
 public class CostComparator implements Comparator<Office_Supplies> {
     @Override
     public int compare(Office_Supplies o1, Office_Supplies o2) {
-        return (o1.cost<o2.cost ? -1 : (o1.cost == o2.cost ? 0 : 1));
+        return (o1.cost < o2.cost ? -1 : (o1.cost == o2.cost ? 0 : 1));
     }
 
 

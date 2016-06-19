@@ -5,8 +5,8 @@ package module_2.task_5;
  */
 public class ManagementSystem {
 
-    public static void findDiscipline(Student st){
-        for(Discipline d : Discipline.values()){
+    public static void findDiscipline(Student st) {
+        for (Discipline d : Discipline.values()) {
             d.findGrades(st);
         }
     }

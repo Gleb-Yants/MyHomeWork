@@ -5,8 +5,8 @@ package module_2.tasks_5to6;
  * Atomic Boat - presented Class with Ability of running with Atomic Engine.
  */
 public class AtomicBoat {
-    class AtomicEngine{
-        public void run(){
+    class AtomicEngine {
+        public void run() {
 
         }
     }

@@ -6,16 +6,16 @@ import module_2.task_3.Office_Supplies;
  * Created by Gleb_Yants on 30.05.2016.
  */
 public class Accounting {
-    public static int checkEmployee(Employee e){
-        int result=0;
-        if(e.pa!=null){
-           result=e.pa.count*e.pa.cost;
+    public static int checkEmployee(Employee e) {
+        int result = 0;
+        if (e.pa != null) {
+            result = e.pa.count * e.pa.cost;
         }
-        if(e.pe!=null){
-            result+=e.pe.count*e.pe.cost;
+        if (e.pe != null) {
+            result += e.pe.count * e.pe.cost;
         }
-        if(e.st!=null){
-            result+=e.st.count*e.st.cost;
+        if (e.st != null) {
+            result += e.st.count * e.st.cost;
         }
         return result;
     }

@@ -17,12 +17,12 @@ public abstract class Office_Supplies {
     public final int cost;
 
     public Office_Supplies(String name, int cost) {
-        this.name=name;
-        this.cost=cost;
+        this.name = name;
+        this.cost = cost;
     }
 
-    public static Office_Supplies[] newbiesPack(){
-        return new Office_Supplies[]{new Paper(1),new Pencil(1),new Sticker(1)};
+    public static Office_Supplies[] newbiesPack() {
+        return new Office_Supplies[]{new Paper(1), new Pencil(1), new Sticker(1)};
     }
 
     /* just for test
