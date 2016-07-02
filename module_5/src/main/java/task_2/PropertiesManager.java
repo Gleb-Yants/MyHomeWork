@@ -11,15 +11,17 @@ import java.io.IOException;
  * Created by Gleb_Yants on 19.06.2016.
  */
 public class PropertiesManager {
-    public static String getV(File f, String v) throws NotFoundKeyException, NFException {
+    //  static Map<String, String> prop = new HashMap<>();
+    public static String getV(File f, String k) throws NotFoundKeyException, NFException {
         if (!(f.exists())) {
             throw new NFException();
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
             while (reader.ready()) {
                 String[] line = reader.readLine().split("=");
-                if (line[0].trim().equals(v)) {
+                if (line[0].trim().equals(k)) {
                     return line[1].trim();
+                    //   return prop.put(k, line[1].trim());
                 }
             }
         } catch (IOException e) {
