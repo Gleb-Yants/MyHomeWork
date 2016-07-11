@@ -12,10 +12,10 @@ public class MyJDBC {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/TestSQL", "root", "servitut411");
-            //addRecord("Гена", "Феоктистов");
-            refresh2Records("Чичикова", "Белов");
+            //addRecord("Donald", "Trump");
+            refresh2Records("Trump", "Clinton");
             //deleteTable();
-            //System.out.println(getRecord("Феоктистов"));
+            //System.out.println(getRecord("Trump"));
             showAllRecords();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
