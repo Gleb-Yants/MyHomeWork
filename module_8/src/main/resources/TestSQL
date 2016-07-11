@@ -1,0 +1,50 @@
+DROP DATABASE IF EXISTS TestSQL;
+
+CREATE DATABASE TestSQL
+  DEFAULT CHARACTER SET 'utf8';
+
+USE TestSQL;
+
+CREATE TABLE groups
+(
+  group_id   INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  groupName  VARCHAR(255) NOT NULL,
+  curator    VARCHAR(255) NOT NULL,
+  speciality VARCHAR(255) NOT NULL,
+  PRIMARY KEY (group_id)
+)
+  ENGINE = InnoDB;
+
+CREATE TABLE students
+(
+  student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  firstName  VARCHAR(255) NOT NULL,
+  surName    VARCHAR(255) NOT NULL,
+  PRIMARY KEY (student_id)
+)
+  ENGINE = InnoDB;
+
+SET NAMES 'utf8';
+
+INSERT INTO groups (groupName, curator, speciality)
+VALUES ('Первая', 'Доктор Борменталь', 'Создание собачек из человеков');
+INSERT INTO groups (groupName, curator, speciality)
+VALUES ('Вторая', 'Профессор Преображенский', 'Создание человеков из собачек');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Иван', 'Степанов');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Наталья', 'Чичикова');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Виктор', 'Белов');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Петр', 'Сушкин');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Вероника', 'Ковалева');
+
+INSERT INTO students (firstName, surName)
+VALUES ('Ирина', 'Истомина');

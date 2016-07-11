@@ -16,6 +16,7 @@ public class PropertiesManager {
         if (!(f.exists())) {
             throw new NFException();
         }
+        synchronized (PropertiesManager.class) {
         try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
             while (reader.ready()) {
                 String[] line = reader.readLine().split("=");
@@ -26,6 +27,7 @@ public class PropertiesManager {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
         }
         throw new NotFoundKeyException();
     }
